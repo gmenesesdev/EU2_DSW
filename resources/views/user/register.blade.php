@@ -27,7 +27,7 @@
 <body class="hold-transition register-page">
     <div class="register-box">
         <div class="register-logo">
-            <a href=""><b>Instituto Profesional </b>San Sebastián</a>
+            <a href=""><b>Instituto Profesional <br></b>San Sebastián</a>
         </div>
 
         <div class="card">
@@ -46,7 +46,7 @@
                 <form action="{{ route('user.registrar') }}" method="POST">
                     @csrf
                     <div class="input-group mb-3">
-                        <input type="text" name="nombre" class="form-control" placeholder="Nombre" value="Hola">
+                        <input type="text" name="nombre" class="form-control" placeholder="Nombre">
                         <div class="input-group-append">
                             <div class="input-group-text">
                                 <span class="fas fa-user"></span>
@@ -54,7 +54,7 @@
                         </div>
                     </div>
                     <div class="input-group mb-3">
-                        <input type="email" name="email" class="form-control" placeholder="Email" value="hola@hola.com">
+                        <input type="email" name="email" class="form-control" placeholder="Email">
                         <div class="input-group-append">
                             <div class="input-group-text">
                                 <span class="fas fa-envelope"></span>
@@ -62,7 +62,7 @@
                         </div>
                     </div>
                     <div class="input-group mb-3">
-                        <input type="password" name="password" class="form-control" placeholder="Password" value="1234">
+                        <input type="password" name="password" class="form-control" placeholder="Password">
                         <div class="input-group-append">
                             <div class="input-group-text">
                                 <span class="fas fa-lock"></span>
@@ -70,7 +70,7 @@
                         </div>
                     </div>
                     <div class="input-group mb-3">
-                        <input type="password" name="rePassword" class="form-control" placeholder="Repetir Contraseña" value="1234">
+                        <input type="password" name="rePassword" class="form-control" placeholder="Repetir Contraseña">
                         <div class="input-group-append">
                             <div class="input-group-text">
                                 <span class="fas fa-lock"></span>
@@ -78,7 +78,7 @@
                         </div>
                     </div>
                     <div class="input-group mb-3">
-                        <input type="password" name="dayCode" class="form-control" placeholder="DayCode" value="16">
+                        <input type="password" name="dayCode" class="form-control" placeholder="DayCode">
                         <div class="input-group-append">
                             <div class="input-group-text">
                                 <span class="fas fa-lock"></span>

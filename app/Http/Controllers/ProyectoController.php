@@ -14,10 +14,10 @@ class ProyectoController extends Controller
     {
         $user = Auth::user();
         if ($user == NULL) {
-            return redirect()->route('usuario.login')->withErrors('messsage', 'No existe una sesión activa.');
+            return redirect()->route('user.login')->withErrors('messsage', 'No existe una sesión activa.');
         }
         $datos = Proyecto::all();
-        return view('backoffice.mantenedor.proyecto', [
+        return view('backoffice.dashboard', [
             'user' => $user,
             'datos' => $datos,
         ]);
