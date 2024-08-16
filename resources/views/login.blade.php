@@ -64,7 +64,7 @@
                     <a href="">Olvidé mi contraseña</a>
                 </p>
                 <p class="mb-0">
-                    <a href="" class="text-center">Registrar nuevo usuario</a>
+                    <a href="{{route('register')}}" class="text-center">Registrar nuevo usuario</a>
                 </p>
             </div>
             <!-- /.login-card-body -->
