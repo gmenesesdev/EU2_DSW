@@ -77,7 +77,7 @@
                     </div>
                 </form>
 
-                <a href="{{route('login')}}" class="text-center">Ya tengo una cuenta</a>
+                <a href="{{route('user.login')}}" class="text-center">Ya tengo una cuenta</a>
             </div>
             <!-- /.form-box -->
         </div><!-- /.card -->

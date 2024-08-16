@@ -26,8 +26,22 @@
         <div class="card">
             <div class="card-body login-card-body">
                 <p class="login-box-msg">Logueate para iniciar tu sesión</p>
-
-                <form action="" method="post">
+                <!--Controlar los errores de validación-->
+                @if ($errors->any())
+                    <div>
+                        <ul>
+                            @foreach ($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                            @endforeach
+                        </ul>
+                    </div>
+                @endif
+                <!--Success-->
+                @if (session('success'))
+                    <li>{{ session('success') }}</li>
+                @endif
+                <form action="{{ route('user.validar') }}" method="POST">
+                    @csrf
                     <div class="input-group mb-3">
                         <input type="email" class="form-control" placeholder="Email">
                         <div class="input-group-append">
@@ -64,7 +78,7 @@
                     <a href="">Olvidé mi contraseña</a>
                 </p>
                 <p class="mb-0">
-                    <a href="{{route('register')}}" class="text-center">Registrar nuevo usuario</a>
+                    <a href="{{ route('register') }}" class="text-center">Registrar nuevo usuario</a>
                 </p>
             </div>
             <!-- /.login-card-body -->
