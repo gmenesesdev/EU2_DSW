@@ -94,11 +94,11 @@ class UserController extends Controller
             ]);
             return redirect()->route('user.login')->with('success', 'Usuario registrado exitosamente.');
         } catch (QueryException $e) {
-            echo 'No registra usuario ' . $e->getMessage() . ' - Code: ' . $e->getCode();
-            // if ($e->getCode() == 23000) {
-            //     return back()->withErrors(['message' => 'El email ya se encuentra registrado.']);
-            // }
-            // return back()->withErrors(['message' => 'Error al registrar el usuario.' . $e->getMessage()]);
+            // echo 'No registra usuario ' . $e->getMessage() . ' - Code: ' . $e->getCode();
+            if ($e->getCode() == 23000) {
+                return back()->withErrors(['message' => 'El email ya se encuentra registrado.']);
+            }
+            return back()->withErrors(['message' => 'Error al registrar el usuario.' . $e->getMessage()]);
         }
     }
 }
