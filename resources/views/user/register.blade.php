@@ -27,7 +27,7 @@
 <body class="hold-transition register-page">
     <div class="register-box">
         <div class="register-logo">
-            <a href=""><b>IP</b>SS</a>
+            <a href=""><b>Instituto Profesional </b>San Sebastián</a>
         </div>
 
         <div class="card">
